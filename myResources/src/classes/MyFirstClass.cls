@@ -9,6 +9,7 @@ public static void applyDiscount(Books__c[] books) {
       System.debug('Helo');
       System.debug('hi world');
  System.debug('Helooo');
+ system.debug('okay');
    }
 
 }
