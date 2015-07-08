@@ -16,7 +16,29 @@
             <pathelement location="../ant-salesforce.jar" />        	
         </classpath>
     </taskdef>
-	
+	<!--getCode and deployCode-->
+	<target name="getCode">
+      <echo level="info">Retrieving the server's version of code</echo>
+      <mkdir dir="${basedir}/${sf.retrievedTdarget}"/>
+      <sf:retrieve
+        retrieveTarget="${basedir}/${sf.retrievedTarget}"
+        username="${sf.username}"
+        password="${sf.password}"
+        serverurl="${sf.serverurl}"
+        unpackaged="src/package.xml"/>
+      <move file="${basedir}/${sf.retrievedTarget}" tofile="src"/>
+    </target>
+ 
+    <target name="deploymentCode" depends="getCode">
+      <echo level="info">Performing the deploy</echo>
+      <sf:deploy
+        username="${sf.username}"
+        password="${sf.password}"
+        serverurl="${sf.serverurl}"
+        deployRoot="${basedir}/src"
+        pollWaitMillis="${sf.pollWaitMillis}"
+        maxPoll="${sfdc.maxPoll}"/>
+    </target>
     <!-- Test out deploy and retrieve verbs for package 'mypkg' -->
     <target name="test">
       <!-- Upload the contents of the "mypkg" package -->
