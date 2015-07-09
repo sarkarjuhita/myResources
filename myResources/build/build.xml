@@ -16,6 +16,7 @@
   <property name="sf.password" value="${env.bamboo_password}" />
   <property name="sf.serverUrl" value="${env.bamboo_serverUrl}" />
   <property name="sf.maxPoll" value="${env.bamboo_maxPoll}" />
+  <property name="sf.testLevel" value="${env.bamboo_testLevel}" />
   <property name="sf.maxWaitMillis" value="${env.bamboo_maxWaitMillis}" />
   <property name="sf.checkOnly" value="${env.bamboo_checkOnly}" />
 
@@ -43,7 +44,8 @@
 	        serverurl="${sf.serverUrl}" 
 	    	maxPoll="${sf.maxPoll}" 
 	    	pollWaitMillis="${sf.maxWaitMillis}"
-	      	zipFile="${src.dir}/batch.zip" 
+	      	zipFile="${src.dir}/batch.zip"
+	    	testLevel="${sf.testLevel}" 
 	    	checkOnly="${sf.checkOnly}"  
 		junitreportdir="test-report-xml"
 		>
@@ -70,6 +72,7 @@
 		serverurl="${sf.serverUrl}" 
 		maxPoll="${sf.maxPoll}" 
 		pollWaitMillis="${sf.maxWaitMillis}"
+        	testLevel="${sf.testLevel}"
 		logType="Debugonly"
 		zipfile="${src.dir}/batch.zip"
 		junitreportdir="test-report-xml"
