@@ -17,7 +17,6 @@
   <property name="sf.serverUrl" value="${env.bamboo_serverUrl}" />
   <property name="sf.maxPoll" value="${env.bamboo_maxPoll}" />
   <property name="sf.maxWaitMillis" value="${env.bamboo_maxWaitMillis}" />
-  <property name="sf.runAllTest" value="${env.bamboo_runAllTest}" />
   <property name="sf.checkOnly" value="${env.bamboo_checkOnly}" />
 
   <!-- Build classpath -->
@@ -45,7 +44,6 @@
 	    	maxPoll="${sf.maxPoll}" 
 	    	pollWaitMillis="${sf.maxWaitMillis}"
 	      	zipFile="${src.dir}/batch.zip" 
-	    	runAllTests="${sf.runAllTest}"
 	    	checkOnly="${sf.checkOnly}"  
 		junitreportdir="test-report-xml"
 		>
@@ -72,7 +70,6 @@
 		serverurl="${sf.serverUrl}" 
 		maxPoll="${sf.maxPoll}" 
 		pollWaitMillis="${sf.maxWaitMillis}"
-		runAllTests="false" 
 		logType="Debugonly"
 		zipfile="${src.dir}/batch.zip"
 		junitreportdir="test-report-xml"
