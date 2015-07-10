@@ -4,5 +4,5 @@ Books__c[] books = Trigger.new;
 MyFirstClass.applyDiscount(books);
 MySecondClass.dummy(books);
 MyThirdClass.applyVariable(books);
-
+MyFourthClass.validatePrice(books);
 }
