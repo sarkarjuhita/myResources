@@ -8,6 +8,7 @@ public with sharing class MySecondClass
 		if(b.Price__c <1000)
 		{
 			System.debug('price is high');
+			System.debug('hello');
 		}
 		}
    }
