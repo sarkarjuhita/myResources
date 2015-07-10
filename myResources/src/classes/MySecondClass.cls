@@ -5,9 +5,9 @@ public with sharing class MySecondClass
 	{
 		
 		for (Books__c b :books){
-		if(b.Price__c != 10)
+		if(b.Price__c <1000)
 		{
-			System.debug('price is not 10 rupees');
+			System.debug('price is high');
 		}
 		}
    }
