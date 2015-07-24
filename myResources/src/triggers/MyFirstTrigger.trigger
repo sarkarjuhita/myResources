@@ -6,5 +6,6 @@ MySecondClass.dummy(books);
 MyThirdClass.applyVariable(books);
 MyFourthClass.validatePrice(books);
 classNew.newMethod(books);
+newClassMain.newMethodMain(books);
 
 }
