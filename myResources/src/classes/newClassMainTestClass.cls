@@ -4,7 +4,7 @@ public with sharing class newClassMainTestClass
 static testMethod void validatenewClassMain() {
        Books__c b = new Books__c(Name='Behind the Cloud', Price__c=100);
       newClassMain obj= new newClassMain();
-      obj.newMethodMain(b);
+      //obj.newMethodMain(b);
        System.debug('Price before inserting new book: ' + b.Price__c);
 
         // Insert book
