@@ -8,7 +8,7 @@ public with sharing class classNew
      
       
         System.debug('its a new class');
-     
+     System.debug('giving an example');
       System.debug('its a vnew class');
       
    }
